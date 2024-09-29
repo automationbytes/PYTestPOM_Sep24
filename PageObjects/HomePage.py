@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
 
-class Homepage():
+class HomePage():
     appLogo_webElement_xpath = "//div[text()='Swag Labs']"
     filter_select_xpath = "//select[@data-test='product-sort-container']"
     openMenu_webElement_css = '#react-burger-menu-btn'
@@ -11,7 +11,7 @@ class Homepage():
 
     def __init__(self,driver):
         self.driver = driver
-        self.driver = webdriver.Chrome()
+        #self.driver = webdriver.Chrome()
 
     def verifyLogo(self):
         return self.driver.find_element(By.XPATH,self.appLogo_webElement_xpath).is_displayed()
